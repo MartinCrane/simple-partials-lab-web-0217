@@ -4,6 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def create
+  
     @student = Student.new(student_params)
     if @student.save
       redirect_to @student
@@ -22,6 +23,10 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
+  end
+
+  def update
+
   end
 
   def student_params

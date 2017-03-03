@@ -1,0 +1,46 @@
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :hometown %>
+  <%= f.text_field :hometown %>
+</p>
+<p>
+  <%= f.label :birthday %>
+  <%= f.date_field :birthday %>
+</p>
+  <%= f.submit %>
+
+  <%= form_for @student do |f| %>
+  <%= render :partial => "form", :locals => {:f => f } %>
+  <% end %>
+
+
+
+?????
+
+
+<label>name:</label><br>
+<%= text_field_tag :name %><br>
+
+<label>hometown</label><br>
+<%= text_area_tag :hometown %><br>
+
+<label>birthday</label><br>
+<%= datetime_local_field :birthday %><br>
+
+<%= submit_tag "Submit" %>
+
+
+
+
+<%= form_tag student_path(@student), method: "put" do %>
+<%= render "form" %>
+<% end %>
+
+
+<%= form_tag student_path do %>
+<%= render "form" %>
+
+<% end %>
